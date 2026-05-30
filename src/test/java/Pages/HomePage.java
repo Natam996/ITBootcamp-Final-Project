@@ -21,6 +21,9 @@ public class HomePage extends BaseTest {
     @FindBy(linkText = "Logout")
     public WebElement logoutButton;
 
+    @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[10]/a")
+    public WebElement loggedInName;
+
 
 
     //-------------------------------------

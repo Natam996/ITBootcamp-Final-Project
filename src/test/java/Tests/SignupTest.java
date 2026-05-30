@@ -61,9 +61,6 @@ public class SignupTest extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
     }
 
-
-
-
     @AfterMethod
     public void teardown(){
         driver.quit();
