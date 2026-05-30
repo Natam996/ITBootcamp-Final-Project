@@ -37,7 +37,8 @@ public class SignupTest extends BaseTest {
         homePage.clickOnSignupLoginButton();  //klik na "Signup/Login" dugme
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/login"); //verifikacija da se Actual i Expected url poklapaju
         loginPage.inputName("Natalija");
-        loginPage.inputEmail("natalija.8@gmail.com");
+        String randomEmail = "natam" + System.currentTimeMillis() + "@gmail.com";
+        loginPage.inputEmail(randomEmail);
         loginPage.clickOnSignupButton();
         Assert.assertEquals(signupPage.accountInfo.getText(), "ENTER ACCOUNT INFORMATION");
         signupPage.clickOnRadioButton();
