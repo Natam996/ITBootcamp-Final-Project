@@ -21,6 +21,8 @@ public class HomePage extends BaseTest {
     @FindBy(linkText = "Logout")
     public WebElement logoutButton;
 
+    @FindBy(linkText = "Cart")
+    public WebElement cartIcon;
 
 
     //-------------------------------------
@@ -32,6 +34,10 @@ public class HomePage extends BaseTest {
 
     public void clickOnLogoutButton(){
         logoutButton.click();
+    }
+
+    public void clickOnCartIcon(){
+        cartIcon.click();
     }
 
 }
