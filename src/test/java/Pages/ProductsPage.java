@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class ProductsPage extends BaseTest {
 
     public ProductsPage(){
@@ -14,4 +16,35 @@ public class ProductsPage extends BaseTest {
     @FindBy(css = ".title.text-center")
     public WebElement allProducts;
 
+    @FindBy(className = "single-products")
+    public List <WebElement> products;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[6]/div/div[1]/div[2]/div/a")
+    public WebElement addToCartButton;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[1]/div/div")
+    public WebElement addedProductMessage;
+
+    @FindBy(linkText = "View Cart")
+    public WebElement viewCartButton;
+
+
+    //------------------------------------------------
+
+    /*
+    public void clickOnProduct(String productName) {
+        for (int i = 0; i < products.size(); i++) {
+            scrollToElement(products.get(i));
+            if(products.get(i).getText().contains(productName)) {
+                products.get(i).click();
+                break;
+            }
+        }
+    }
+
+     */
+
+    public void clickOnViewCart(){
+        viewCartButton.click();
+    }
 }

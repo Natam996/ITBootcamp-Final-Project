@@ -17,6 +17,9 @@ public class ShoppingCartPage extends BaseTest {
     @FindBy(linkText = "here")
     public WebElement hereText;
 
+    @FindBy(className = "cart_description")
+    public WebElement cartDesription;
+
     //--------------------------------------
 
     public void clickOnTextHere(){

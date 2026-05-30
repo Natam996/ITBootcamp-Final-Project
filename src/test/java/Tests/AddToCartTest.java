@@ -5,6 +5,7 @@ import Pages.HomePage;
 import Pages.ProductsPage;
 import Pages.ShoppingCartPage;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -37,10 +38,24 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Shopping Cart")); //provera da smo na pravom sajtu
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Cart is empty! Click here to buy products")); //provera da je korpa prazna
         shoppingCartPage.clickOnTextHere();
+        //Thread.sleep(5000);
         closeAdPopupIfPresent();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
         Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
+        scrollToElement(productsPage.products.get(4));
+        //If you need to hover and then click something that appears after hover:
+        Actions actions = new Actions(driver);
+        actions.moveToElement(productsPage.products.get(4)).perform();
 
+        // Now click the button that appeared after hover
+        wait.until(ExpectedConditions.visibilityOf(productsPage.addToCartButton));
+        productsPage.addToCartButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(productsPage.addedProductMessage.isDisplayed());
+        Assert.assertTrue(productsPage.addedProductMessage.getText().contains("Your product has been added to cart"));
+        productsPage.clickOnViewCart();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/view_cart");
+        Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
 
 
 
