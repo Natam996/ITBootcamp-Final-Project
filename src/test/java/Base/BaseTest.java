@@ -23,6 +23,7 @@ public class BaseTest {
     public AccountCreatedPage accountCreatedPage;
     public ShoppingCartPage shoppingCartPage;
     public ProductsPage productsPage;
+    public ProductDetailsPage productDetailsPage;
 
 
     @BeforeClass
