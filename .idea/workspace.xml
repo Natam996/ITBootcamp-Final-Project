@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
     </list>
@@ -26,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login-tests" />
+        <entry key="$PROJECT_DIR$" value="add-to-cart-tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +47,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
+    "TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignupTest.UserCanSignupSuccessfully.executor": "Run",
@@ -55,11 +55,11 @@
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "add-to-cart-tests",
+    "git-widget-placeholder": "remove-from-cart-tests",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.UserCanAddToCartOneProduct">
+  <component name="RunManager" selected="TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart">
     <configuration name="AddToCartTest.UserCanAddToCartOneProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -71,6 +71,24 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
       <option name="METHOD_NAME" value="UserCanAddToCartOneProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveFromCartTest.UserCanRemoveOneProductFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
+      <option name="METHOD_NAME" value="UserCanRemoveOneProductFromCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,9 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
+        <item itemvalue="TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
         <item itemvalue="TestNG.SignupTest" />
+        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
+        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
       </list>
     </recent_temporary>
   </component>

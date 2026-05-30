@@ -20,9 +20,16 @@ public class ShoppingCartPage extends BaseTest {
     @FindBy(className = "cart_description")
     public WebElement cartDesription;
 
+    @FindBy(className = "cart_quantity_delete")
+    public WebElement xButton;
+
     //--------------------------------------
 
     public void clickOnTextHere(){
         hereText.click();
+    }
+
+    public void clickOnX(){
+        xButton.click();
     }
 }

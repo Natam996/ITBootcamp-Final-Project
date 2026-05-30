@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class AddToCartTest extends BaseTest {
+public class RemoveFromCartTest extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp() {
@@ -25,13 +25,12 @@ public class AddToCartTest extends BaseTest {
         driver.manage().window().maximize();
 
         homePage = new HomePage();
-        shoppingCartPage= new ShoppingCartPage();
+        shoppingCartPage = new ShoppingCartPage();
         productsPage = new ProductsPage();
-
     }
 
     @Test
-    public void UserCanAddToCartOneProduct() throws InterruptedException {
+    public void UserCanRemoveOneProductFromCart() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/");
         homePage.clickOnCartIcon();
@@ -56,11 +55,12 @@ public class AddToCartTest extends BaseTest {
         productsPage.clickOnViewCart();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/view_cart");
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
-
+        shoppingCartPage.clickOnX();
+        Thread.sleep(3000);
+        Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Cart is empty! Click here to buy products"));
     }
     @AfterMethod
     public void teardown(){
         driver.quit();
     }
 }
-
