@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -27,8 +28,8 @@ public class ContactSiteTest extends BaseTest {
         reviewAddedPage = new ReviewAddedPage();
     }
 
-    @Test
-    public void UserCanContactSiteWithoutUploadingFile(){
+    @Test(priority = 1)
+    public void UserCanContactSiteWithoutUploadingFile() {
         driver.navigate().to("https://automationexercise.com/");
         homePage.clickOnContactUs();
         contactUsPage.inputNameEmailSubject("Natalija", "natalija.8@gmail.com", "wrong top");
@@ -37,6 +38,25 @@ public class ContactSiteTest extends BaseTest {
         wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().accept();
         Assert.assertTrue(reviewAddedPage.reviewAddedMessage.getText().contains("Success! Your details have been submitted successfully."));
-        
     }
+
+    @Test(priority = 2)
+    public void UserCanContactSiteAndUploadFile() throws InterruptedException {
+        driver.navigate().to("https://automationexercise.com/");
+        homePage.clickOnContactUs();
+        contactUsPage.inputNameEmailSubject("Natalija", "natalija.8@gmail.com", "wrong top");
+        contactUsPage.inputMessage("The top i got was wrong!");
+        Thread.sleep(3000);
+        contactUsPage.fileUploadInput.sendKeys("C:\\Users\\Natalija Mitic\\Desktop\\1\\slika.jpg");
+        contactUsPage.clickOnSubmit();
+        wait.until(ExpectedConditions.alertIsPresent());
+        driver.switchTo().alert().accept();
+        Assert.assertTrue(reviewAddedPage.reviewAddedMessage.getText().contains("Success! Your details have been submitted successfully."));
+    }
+
+    @AfterMethod
+    public void teardown() {
+        driver.quit();
+    }
+
 }

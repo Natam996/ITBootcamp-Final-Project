@@ -31,6 +31,9 @@ public class ContactUsPage extends BaseTest {
     @FindBy(name = "submit")
     public WebElement submitButton;
 
+    @FindBy(css = "input[type='file']")
+    public WebElement fileUploadInput;
+
 
     //------------------------------------------
 
