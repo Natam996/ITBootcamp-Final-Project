@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/BrandProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Brands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/SidebarCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchProductsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add-to-cart-tests" />
+        <entry key="$PROJECT_DIR$" value="remove-from-cart-tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +52,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
     "TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart.executor": "Run",
+    "TestNG.SearchProductsTest.UserCanSearchProductFromAllProducts.executor": "Run",
+    "TestNG.SearchProductsTest.UserCanSearchProductFromBrands.executor": "Run",
+    "TestNG.SearchProductsTest.UserCanSearchProductFromCategorySidebar.executor": "Run",
+    "TestNG.SearchProductsTest.UserCanSearchProductFromSearchBar.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignupTest.UserCanSignupSuccessfully.executor": "Run",
@@ -55,12 +63,12 @@
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "remove-from-cart-tests",
+    "git-widget-placeholder": "search-products",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart">
-    <configuration name="AddToCartTest.UserCanAddToCartOneProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SearchProductsTest.UserCanSearchProductFromBrands">
+    <configuration name="SearchProductsTest.UserCanSearchProductFromAllProducts" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -69,8 +77,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="METHOD_NAME" value="UserCanAddToCartOneProduct" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchProductsTest" />
+      <option name="METHOD_NAME" value="UserCanSearchProductFromAllProducts" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -78,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveFromCartTest.UserCanRemoveOneProductFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductsTest.UserCanSearchProductFromBrands" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -87,8 +95,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
-      <option name="METHOD_NAME" value="UserCanRemoveOneProductFromCart" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchProductsTest" />
+      <option name="METHOD_NAME" value="UserCanSearchProductFromBrands" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -96,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignupTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductsTest.UserCanSearchProductFromCategorySidebar" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -105,8 +113,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SignupTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchProductsTest" />
+      <option name="METHOD_NAME" value="UserCanSearchProductFromCategorySidebar" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchProductsTest.UserCanSearchProductFromSearchBar" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchProductsTest" />
+      <option name="METHOD_NAME" value="UserCanSearchProductFromSearchBar" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart" />
+        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromBrands" />
+        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromSearchBar" />
+        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromCategorySidebar" />
+        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromAllProducts" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
-        <item itemvalue="TestNG.SignupTest" />
-        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
-        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
       </list>
     </recent_temporary>
   </component>

@@ -23,6 +23,10 @@ public class BaseTest {
     public AccountCreatedPage accountCreatedPage;
     public ShoppingCartPage shoppingCartPage;
     public ProductsPage productsPage;
+    public SidebarCategory sidebarCategory;
+    public Brands brands;
+    public BrandProducts brandProducts;
+
 
 
     @BeforeClass
@@ -46,4 +50,29 @@ public class BaseTest {
             System.out.println("No ad popup found");
         }
     }
+
+    public void closeAdPopupIfPresent1() {  //ovo je za pop up na Products page
+        try {
+            driver.switchTo().frame("aswift_3");
+            WebElement closeButton = driver.findElement(By.id("dismiss-button-element"));
+            closeButton.click();
+            driver.switchTo().defaultContent();
+        } catch (Exception e) {
+            driver.switchTo().defaultContent();
+            System.out.println("No ad popup found");
+        }
+    }
+
+    public void closeAdPopupIfPresent2() {  //ovo je za pop up na Products page
+        try {
+            driver.switchTo().frame("aswift_4");
+            WebElement closeButton = driver.findElement(By.id("dismiss-button-element"));
+            closeButton.click();
+            driver.switchTo().defaultContent();
+        } catch (Exception e) {
+            driver.switchTo().defaultContent();
+            System.out.println("No ad popup found");
+        }
+    }
+
 }

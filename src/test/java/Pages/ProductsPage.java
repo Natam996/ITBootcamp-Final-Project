@@ -28,6 +28,12 @@ public class ProductsPage extends BaseTest {
     @FindBy(linkText = "View Cart")
     public WebElement viewCartButton;
 
+    @FindBy(id = "search_product")
+    public WebElement searchBarField;
+
+    @FindBy(id = "submit_search")
+    public WebElement searchButton;
+
 
     //------------------------------------------------
 
@@ -46,5 +52,14 @@ public class ProductsPage extends BaseTest {
 
     public void clickOnViewCart(){
         viewCartButton.click();
+    }
+
+    public void inputSearch(String product){
+        searchBarField.clear();
+        searchBarField.sendKeys(product);
+    }
+
+    public void clickOnSearch(){
+        searchButton.click();
     }
 }
