@@ -27,6 +27,10 @@ public class HomePage extends BaseTest {
     @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[10]/a")
     public WebElement loggedInName;
 
+    @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[2]/a")
+    public WebElement productsButton;
+
+
 
     //-------------------------------------
 
@@ -41,6 +45,10 @@ public class HomePage extends BaseTest {
 
     public void clickOnCartIcon(){
         cartIcon.click();
+    }
+
+    public void clickOnProducts(){
+        productsButton.click();
     }
 
 }

@@ -26,6 +26,9 @@ public class ShoppingCartPage extends BaseTest {
     @FindBy(className = "cart_quantity")
     public WebElement cartQuantity;
 
+    @FindBy(css = ".btn.btn-default.check_out")
+    public WebElement proceedToCheckout;
+
     //--------------------------------------
 
     public void clickOnTextHere(){
@@ -34,5 +37,9 @@ public class ShoppingCartPage extends BaseTest {
 
     public void clickOnProduct(){
         productWinterTop.click();
+    }
+
+    public void clickOnProceedToCheckout(){
+        proceedToCheckout.click();
     }
 }

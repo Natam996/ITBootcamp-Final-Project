@@ -3,8 +3,11 @@ package Tests;
 import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
+import Pages.ProductsPage;
 import Pages.ShoppingCartPage;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -25,20 +28,41 @@ public class OrderProductTest extends BaseTest {
         homePage = new HomePage();
         shoppingCartPage = new ShoppingCartPage();
         loginPage = new LoginPage();
+        productsPage = new ProductsPage();
     }
 
     @Test
-    public void UserCanOrderProducts(){
+    public void UserCanOrderProducts() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/login");
         Assert.assertTrue(loginPage.loginForm.isDisplayed());
         loginPage.inputLoginEmail("natalija.8@gmail.com");
         loginPage.inputPassword("Qwerty1!");
         loginPage.clickOnLoginButton();
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/");
         Assert.assertTrue(homePage.loggedInName.isDisplayed());
         Assert.assertTrue(homePage.loggedInName.getText().contains("Natalija"));
         Assert.assertTrue(homePage.logoutButton.isDisplayed());
+        closeAdPopupIfPresent1();
+        homePage.clickOnProducts();
+        closeAdPopupIfPresent1();
+        //Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
+        Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
+        scrollToElement(productsPage.products.get(4));
+        //If you need to hover and then click something that appears after hover:
+        Actions actions = new Actions(driver);
+        actions.moveToElement(productsPage.products.get(4)).perform();
 
+        // Now click the button that appeared after hover
+        wait.until(ExpectedConditions.visibilityOf(productsPage.addToCartButton));
+        productsPage.addToCartButton.click();
+        Thread.sleep(3000);
+        Assert.assertTrue(productsPage.addedProductMessage.isDisplayed());
+        Assert.assertTrue(productsPage.addedProductMessage.getText().contains("Your product has been added to cart"));
+        productsPage.clickOnViewCart();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/view_cart");
+        Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
+        shoppingCartPage.clickOnProceedToCheckout();
         
     }
 
