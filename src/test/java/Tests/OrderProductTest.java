@@ -1,10 +1,7 @@
 package Tests;
 
 import Base.BaseTest;
-import Pages.HomePage;
-import Pages.LoginPage;
-import Pages.ProductsPage;
-import Pages.ShoppingCartPage;
+import Pages.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,6 +26,9 @@ public class OrderProductTest extends BaseTest {
         shoppingCartPage = new ShoppingCartPage();
         loginPage = new LoginPage();
         productsPage = new ProductsPage();
+        checkoutPage = new CheckoutPage();
+        paymentPage = new PaymentPage();
+        paymentDonePage = new PaymentDonePage();
     }
 
     @Test
@@ -43,7 +43,7 @@ public class OrderProductTest extends BaseTest {
         Assert.assertTrue(homePage.loggedInName.isDisplayed());
         Assert.assertTrue(homePage.loggedInName.getText().contains("Natalija"));
         Assert.assertTrue(homePage.logoutButton.isDisplayed());
-        closeAdPopupIfPresent1();
+        //closeAdPopupIfPresent1();
         homePage.clickOnProducts();
         closeAdPopupIfPresent1();
         //Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
@@ -63,7 +63,23 @@ public class OrderProductTest extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/view_cart");
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
         shoppingCartPage.clickOnProceedToCheckout();
-        
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/checkout");
+        checkoutPage.clickOnPlaceOrder();
+        Thread.sleep(2000);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/payment");
+        paymentPage.inputNameOnCard("CardName");
+        paymentPage.inputCardNumber("123");
+        paymentPage.inputCVC("311");
+        paymentPage.inputExpiryMonth("05");
+        paymentPage.inputExpiryYear("2026");
+        scrollToElement(paymentPage.confirmOrderButton);
+        wait.until(ExpectedConditions.elementToBeClickable(paymentPage.confirmOrderButton));
+        paymentPage.clickOnConfirmOrder();
+        Thread.sleep(2000);
+        Assert.assertTrue(paymentDonePage.paymentDoneMessage.getText().contains("ORDER PLACED!"));
+        Assert.assertTrue(paymentDonePage.paymentDoneMessage.getText().contains("Congratulations! Your order has been confirmed!"));
+
+
     }
 
     @AfterMethod
