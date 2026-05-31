@@ -24,6 +24,9 @@ public class HomePage extends BaseTest {
     @FindBy(linkText = "Cart")
     public WebElement cartIcon;
 
+    @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[10]/a")
+    public WebElement loggedInName;
+
 
     //-------------------------------------
 

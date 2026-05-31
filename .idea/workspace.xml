@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/OrderProductTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
     "TestNG.AddToCartTest.UserCanChangeQuantityOfProduct.executor": "Run",
+    "TestNG.OrderProductTest.UserCanOrderProducts.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignupTest.UserCanSignupSuccessfully.executor": "Run",
@@ -56,11 +57,11 @@
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "add-to-cart-tests",
+    "git-widget-placeholder": "order-product-tests",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.UserCanChangeQuantityOfProduct">
+  <component name="RunManager" selected="TestNG.OrderProductTest.UserCanOrderProducts">
     <configuration name="AddToCartTest.UserCanAddToCartOneProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -79,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddToCartTest.UserCanChangeQuantityOfProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToCartTest.UserCanChangeQuantityOfProduct" type="TestNG" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -90,6 +91,24 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
       <option name="METHOD_NAME" value="UserCanChangeQuantityOfProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProductTest.UserCanOrderProducts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.OrderProductTest" />
+      <option name="METHOD_NAME" value="UserCanOrderProducts" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -134,7 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToCartTest.UserCanChangeQuantityOfProduct" />
+        <item itemvalue="TestNG.OrderProductTest.UserCanOrderProducts" />
         <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
         <item itemvalue="TestNG.SignupTest" />
