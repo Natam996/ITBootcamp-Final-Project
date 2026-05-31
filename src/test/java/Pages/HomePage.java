@@ -30,6 +30,9 @@ public class HomePage extends BaseTest {
     @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[2]/a")
     public WebElement productsButton;
 
+    @FindBy(linkText = "Contact us")
+    public WebElement contactUsButton;
+
 
 
     //-------------------------------------
@@ -51,4 +54,7 @@ public class HomePage extends BaseTest {
         productsButton.click();
     }
 
+    public void clickOnContactUs(){
+        contactUsButton.click();
+    }
 }
