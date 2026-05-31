@@ -22,6 +22,21 @@ public class ProductDetailsPage extends BaseTest {
 
     @FindBy(linkText = "View Cart")
     public WebElement viewCartButton;
+
+    @FindBy(id = "name")
+    public WebElement nameField;
+
+    @FindBy(id = "email")
+    public WebElement emailField;
+
+    @FindBy(id = "review")
+    public WebElement reviewField;
+
+    @FindBy(id = "button-review")
+    public WebElement sumbitReviewButton;
+
+    @FindBy(css = ".alert-success.alert")
+    public WebElement successAlert;
     //---------------------------------------------
 
     public void changeQuantity(String number){
@@ -35,5 +50,18 @@ public class ProductDetailsPage extends BaseTest {
 
     public void clickOnViewCart(){
         viewCartButton.click();
+    }
+
+    public void inputNameAndEmail(String name, String email){
+        nameField.clear();
+        nameField.sendKeys(name);
+        emailField.clear();
+        emailField.sendKeys(email);
+    }
+
+    public void sendReview(String review){
+        reviewField.clear();
+        reviewField.sendKeys(review);
+        sumbitReviewButton.click();
     }
 }

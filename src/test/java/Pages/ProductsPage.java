@@ -28,6 +28,9 @@ public class ProductsPage extends BaseTest {
     @FindBy(linkText = "View Cart")
     public WebElement viewCartButton;
 
+    @FindBy(css = "a[href='/product_details/5']")
+    public WebElement viewProductButton;
+
 
     //------------------------------------------------
 
@@ -46,5 +49,9 @@ public class ProductsPage extends BaseTest {
 
     public void clickOnViewCart(){
         viewCartButton.click();
+    }
+
+    public void clickOnViewProduct(){
+        viewProductButton.click();
     }
 }
