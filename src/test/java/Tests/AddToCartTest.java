@@ -63,7 +63,7 @@ public class AddToCartTest extends BaseTest {
 
 
     @Test(priority = 2)
-    public void UserCanChangeQuantityOfProduct() throws InterruptedException {
+    public void UserCanIncreaseQuantityOfProduct() throws InterruptedException {
         UserCanAddToCartOneProduct();
         shoppingCartPage.clickOnProduct();
         Assert.assertTrue(driver.getCurrentUrl().contains("product_details"));
@@ -81,6 +81,27 @@ public class AddToCartTest extends BaseTest {
     }
 
 
+    @Test(priority = 3)
+    public void UserCanDecreaseQuantityOfProduct() throws InterruptedException {
+        UserCanIncreaseQuantityOfProduct();
+        shoppingCartPage.clickOnProduct();
+        productDetailsPage.changeQuantity("-3");
+        productDetailsPage.clickOnAddToCartButton();
+        productsPage.clickOnViewCart();
+        Assert.assertTrue(shoppingCartPage.cartQuantity.getText().contains("1"));
+    }
+
+    //Verifikacija da u korpi mora da postoji broj veci od nule. Test pada jer Quantity box dozvoljava negativne brojeve.
+    //parseInt konvertuje tekst u broj, pa proverava da li je veći od 0.
+    @Test(priority = 4)
+    public void UserCannotHaveNegativeNumberOfProductsInCart() throws InterruptedException {
+        UserCanAddToCartOneProduct();
+        shoppingCartPage.clickOnProduct();
+        productDetailsPage.changeQuantity("-3");
+        productDetailsPage.clickOnAddToCartButton();
+        productsPage.clickOnViewCart();
+        Assert.assertTrue(Integer.parseInt(shoppingCartPage.cartQuantity.getText()) > 0);
+    }
 
     @AfterMethod
     public void teardown(){
