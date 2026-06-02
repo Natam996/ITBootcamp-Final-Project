@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/BrandProducts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Brands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/SidebarCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchProductsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SearchProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchProductsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
     "TestNG.RemoveFromCartTest.UserCanRemoveOneProductFromCart.executor": "Run",
+    "TestNG.SearchProductsTest.SearchProductFromSearchBarNoSpaces.executor": "Run",
     "TestNG.SearchProductsTest.UserCanSearchProductFromAllProducts.executor": "Run",
     "TestNG.SearchProductsTest.UserCanSearchProductFromBrands.executor": "Run",
     "TestNG.SearchProductsTest.UserCanSearchProductFromCategorySidebar.executor": "Run",
@@ -63,11 +58,29 @@
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "search-products",
+    "git-widget-placeholder": "search-products-tests",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SearchProductsTest.UserCanSearchProductFromBrands">
+  <component name="RunManager" selected="TestNG.SearchProductsTest.SearchProductFromSearchBarNoSpaces">
+    <configuration name="SearchProductsTest.SearchProductFromSearchBarNoSpaces" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchProductsTest" />
+      <option name="METHOD_NAME" value="SearchProductFromSearchBarNoSpaces" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchProductsTest.UserCanSearchProductFromAllProducts" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -140,31 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignupTest.UserCanSignupSuccessfully" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ZavrsniProjekat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SignupTest" />
-      <option name="METHOD_NAME" value="UserCanSignupSuccessfully" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromBrands" />
+        <item itemvalue="TestNG.SearchProductsTest.SearchProductFromSearchBarNoSpaces" />
         <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromSearchBar" />
+        <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromBrands" />
         <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromCategorySidebar" />
         <item itemvalue="TestNG.SearchProductsTest.UserCanSearchProductFromAllProducts" />
-        <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
       </list>
     </recent_temporary>
   </component>

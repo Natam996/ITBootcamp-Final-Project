@@ -57,8 +57,6 @@ public class SearchProductsTest extends BaseTest {
     public void UserCanSearchProductFromBrands() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         scrollToElement(brands.brandsNames.get(0));
-        //closeAdPopupIfPresent1();
-        //closeAdPopupIfPresent2();
         brands.clickOnBrandsName("MAST & HARBOUR");
         closeAdPopupIfPresent1();
         closeAdPopupIfPresent2();
@@ -77,6 +75,20 @@ public class SearchProductsTest extends BaseTest {
         productsPage.inputSearch("Winter Top");
         productsPage.clickOnSearch();
         Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
+    }
+     //Verifikacija da se nadje proizvod kada se ukuca u searchbar, bez razmaka i sam malim slovima.
+    // Test pada, ne pronalazi trazeni komad.
+    @Test(priority = 5)
+    public void SearchProductFromSearchBarNoSpaces() throws InterruptedException {
+        driver.navigate().to("https://automationexercise.com/");
+        homePage.clickOnProducts();
+        Thread.sleep(3000);
+        closeAdPopupIfPresent1();
+        Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
+        productsPage.inputSearch("wintertop");
+        productsPage.clickOnSearch();
+        Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
+
     }
 
     @AfterMethod
