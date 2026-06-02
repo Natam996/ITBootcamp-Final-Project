@@ -30,14 +30,13 @@ public class RemoveFromCartTest extends BaseTest {
     }
 
     @Test
-    public void UserCanRemoveOneProductFromCart() throws InterruptedException {
+    public void UserCanRemoveProductFromCart() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/");
         homePage.clickOnCartIcon();
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Shopping Cart")); //provera da smo na pravom sajtu
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Cart is empty! Click here to buy products")); //provera da je korpa prazna
         shoppingCartPage.clickOnTextHere();
-        //Thread.sleep(5000);
         closeAdPopupIfPresent();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
         Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
@@ -58,6 +57,7 @@ public class RemoveFromCartTest extends BaseTest {
         shoppingCartPage.clickOnX();
         Thread.sleep(3000);
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Cart is empty! Click here to buy products"));
+
     }
     @AfterMethod
     public void teardown(){
