@@ -14,11 +14,15 @@ public class LoginPage extends BaseTest {
     @FindBy(name = "name")
     public WebElement nameField;
 
-    @FindBy(xpath = "/html/body/section/div/div/div[3]/div/form/input[3]")
+    @FindBy(css = "input[data-qa='signup-email']")
     public WebElement emailField;
 
     @FindBy(xpath = "/html/body/section/div/div/div[3]/div/form/button")
     public WebElement signupButton;
+
+    @FindBy(className = "signup-form")
+    public WebElement signupForm;
+
 
     //------------------------------------------
 
