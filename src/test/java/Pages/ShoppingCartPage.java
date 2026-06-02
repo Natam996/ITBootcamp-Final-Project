@@ -26,6 +26,9 @@ public class ShoppingCartPage extends BaseTest {
     @FindBy(className = "cart_quantity")
     public WebElement cartQuantity;
 
+    @FindBy(className = "disabled")
+    public WebElement quantityBox;
+
     //--------------------------------------
 
     public void clickOnTextHere(){

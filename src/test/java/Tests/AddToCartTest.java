@@ -60,10 +60,8 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
     }
 
-
-
     @Test(priority = 2)
-    public void UserCanIncreaseQuantityOfProduct() throws InterruptedException {
+    public void UserCanIncreaseQuantityOfProductInProductDetailsPage() throws InterruptedException {
         UserCanAddToCartOneProduct();
         shoppingCartPage.clickOnProduct();
         Assert.assertTrue(driver.getCurrentUrl().contains("product_details"));
@@ -80,20 +78,27 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
     }
 
-
     @Test(priority = 3)
-    public void UserCanDecreaseQuantityOfProduct() throws InterruptedException {
-        UserCanIncreaseQuantityOfProduct();
+    public void UserCanDecreaseQuantityOfProductInProductDetailsPage() throws InterruptedException {
+        UserCanIncreaseQuantityOfProductInProductDetailsPage(); //ovde sada ima 4 komada u korpi
         shoppingCartPage.clickOnProduct();
         productDetailsPage.changeQuantity("-3");
         productDetailsPage.clickOnAddToCartButton();
         productsPage.clickOnViewCart();
         Assert.assertTrue(shoppingCartPage.cartQuantity.getText().contains("1"));
     }
+    //Verifikacija da kada smo na strani Shopping Cart mozemo da menjamo broj komada u korpi.
+    //Test Pada jer je polje za Quantity onemoguceno za unos/manipulaciju.
+    @Test(priority = 4)
+    public void UserCanChangeQuantityOfProductInShoppingCartPage() throws InterruptedException {
+        UserCanIncreaseQuantityOfProductInProductDetailsPage(); //ovde sada ima 4 komada u korpi
+        shoppingCartPage.quantityBox.sendKeys("10");
+        Assert.assertEquals(shoppingCartPage.quantityBox.getText(), "10");
+    }
 
     //Verifikacija da u korpi mora da postoji broj veci od nule. Test pada jer Quantity box dozvoljava negativne brojeve.
     //parseInt konvertuje tekst u broj, pa proverava da li je veći od 0.
-    @Test(priority = 4)
+    @Test(priority = 5)
     public void UserCannotHaveNegativeNumberOfProductsInCart() throws InterruptedException {
         UserCanAddToCartOneProduct();
         shoppingCartPage.clickOnProduct();
