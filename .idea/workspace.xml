@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Base/ExcelReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SignupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SignupTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="contact-site-tests" />
+        <entry key="$PROJECT_DIR$" value="login-tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +52,7 @@
     "TestNG.SignupTest.UserCannotSignupWithInvalidEmailForm.executor": "Run",
     "TestNG.SignupTest.UserCannotSignupWithoutEmail.executor": "Run",
     "TestNG.SignupTest.executor": "Run",
+    "TestNG.SignupTest.invalidNameLastNameAndMobileForm.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -59,7 +60,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SignupTest.UserCannotSignupWithExistingEmail">
+  <component name="RunManager" selected="TestNG.SignupTest.UserCanSignupSuccessfully">
     <configuration name="SignupTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -149,12 +150,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignupTest.invalidNameLastNameAndMobileForm" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SignupTest" />
+      <option name="METHOD_NAME" value="invalidNameLastNameAndMobileForm" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SignupTest.UserCannotSignupWithExistingEmail" />
-        <item itemvalue="TestNG.SignupTest" />
-        <item itemvalue="TestNG.SignupTest.UserCannotSignupWithoutEmail" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
+        <item itemvalue="TestNG.SignupTest.invalidNameLastNameAndMobileForm" />
+        <item itemvalue="TestNG.SignupTest.UserCannotSignupWithExistingEmail" />
+        <item itemvalue="TestNG.SignupTest.UserCannotSignupWithoutEmail" />
+        <item itemvalue="TestNG.SignupTest" />
       </list>
     </recent_temporary>
   </component>

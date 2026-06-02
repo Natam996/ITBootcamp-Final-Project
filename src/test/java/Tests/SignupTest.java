@@ -1,6 +1,7 @@
 package Tests;
 
 import Base.BaseTest;
+import Base.ExcelReader;
 import Pages.AccountCreatedPage;
 import Pages.HomePage;
 import Pages.LoginPage;
@@ -39,7 +40,9 @@ public class SignupTest extends BaseTest {
     }
 
     @Test(priority = 1)
-    public void UserCanSignupSuccessfully(){
+    public void UserCanSignupSuccessfully() throws Exception {
+
+        String path = "C:\\Users\\Natalija Mitic\\Desktop\\1\\testData.xlsx";
 
         loginPage.inputName("Natalija");
         String randomEmail = "natam" + System.currentTimeMillis() + "@gmail.com";
@@ -47,6 +50,21 @@ public class SignupTest extends BaseTest {
         loginPage.clickOnSignupButton();
         Assert.assertEquals(signupPage.accountInfo.getText(), "ENTER ACCOUNT INFORMATION");
         signupPage.clickOnRadioButton();
+        signupPage.inputPassword(ExcelReader.getCellValue(path, 1, 0));
+        signupPage.clickOnDayOption(ExcelReader.getCellValue(path, 1, 1));
+        signupPage.clickOnMonthOption(ExcelReader.getCellValue(path, 1, 2));
+        signupPage.clickOnYearOption(ExcelReader.getCellValue(path, 1, 3));
+        signupPage.inputFirstAndLastName(ExcelReader.getCellValue(path, 1, 4), ExcelReader.getCellValue(path, 1, 5));
+        Assert.assertTrue(signupPage.firstNameField.getAttribute("value").matches("[a-zA-Z]+"));
+        Assert.assertTrue(signupPage.lastNameField.getAttribute("value").matches("[a-zA-Z]+"));
+        signupPage.inputAddress(ExcelReader.getCellValue(path, 1, 6));
+        signupPage.clickOnCountryOption(ExcelReader.getCellValue(path, 1, 7));
+        signupPage.inputState(ExcelReader.getCellValue(path, 1, 8));
+        signupPage.inputCity(ExcelReader.getCellValue(path, 1, 9));
+        signupPage.inputZipCode(ExcelReader.getCellValue(path, 1, 10));
+        signupPage.inputMobileNumber(ExcelReader.getCellValue(path, 1, 11));
+        Assert.assertTrue(signupPage.mobileField.getAttribute("value").matches("[0-9]+"));
+        /*
         signupPage.inputPassword("Qwerty1!");
         signupPage.clickOnDayOption("4");
         signupPage.clickOnMonthOption("December");
@@ -59,6 +77,9 @@ public class SignupTest extends BaseTest {
         signupPage.inputCity("Miami");
         signupPage.inputZipCode("123");
         signupPage.inputMobileNumber("112234");
+        signupPage.clickOnCreateAccount();
+         */
+        Thread.sleep(3000);
         signupPage.clickOnCreateAccount();
         Assert.assertTrue(accountCreatedPage.accountCreatedMessage.getText().contains("ACCOUNT CREATED"));
         accountCreatedPage.clickOnContinueButton();
@@ -98,9 +119,35 @@ public class SignupTest extends BaseTest {
         Assert.assertTrue(validationMessage.contains("Please include an '@' in the email address."));
     }
 
+//verifikacija da test ne prolazi sa nevalidnim imenom, prezimenom i telefonom.
+// Polja za ime i prezime dozvoljavaju brojeve, karaktere..Polje za telefon dozvoljava slova itd...
+    @Test(priority = 5)
+    public void invalidNameLastNameAndMobileForm() throws Exception {
+        String path = "C:\\Users\\Natalija Mitic\\Desktop\\1\\testData.xlsx";
 
-
-
+        loginPage.inputName("Natalija");
+        String randomEmail = "natam" + System.currentTimeMillis() + "@gmail.com";
+        loginPage.inputEmail(randomEmail);
+        loginPage.clickOnSignupButton();
+        Assert.assertEquals(signupPage.accountInfo.getText(), "ENTER ACCOUNT INFORMATION");
+        signupPage.clickOnRadioButton();
+        signupPage.inputPassword(ExcelReader.getCellValue(path, 1, 0));
+        signupPage.clickOnDayOption(ExcelReader.getCellValue(path, 1, 1));
+        signupPage.clickOnMonthOption(ExcelReader.getCellValue(path, 1, 2));
+        signupPage.clickOnYearOption(ExcelReader.getCellValue(path, 1, 3));
+        signupPage.inputFirstAndLastName(ExcelReader.getCellValue(path, 3, 4), ExcelReader.getCellValue(path, 3, 5));
+        Assert.assertTrue(signupPage.firstNameField.getAttribute("value").matches("[a-zA-Z]+"));
+        Assert.assertTrue(signupPage.lastNameField.getAttribute("value").matches("[a-zA-Z]+"));
+        signupPage.inputAddress(ExcelReader.getCellValue(path, 1, 6));
+        signupPage.clickOnCountryOption(ExcelReader.getCellValue(path, 1, 7));
+        signupPage.inputState(ExcelReader.getCellValue(path, 1, 8));
+        signupPage.inputCity(ExcelReader.getCellValue(path, 1, 9));
+        signupPage.inputZipCode(ExcelReader.getCellValue(path, 3, 10));
+        signupPage.inputMobileNumber(ExcelReader.getCellValue(path, 3, 11));
+        Assert.assertTrue(signupPage.mobileField.getAttribute("value").matches("[0-9]+"));
+        signupPage.clickOnCreateAccount();
+        Assert.assertTrue(accountCreatedPage.accountCreatedMessage.getText().contains("ACCOUNT CREATED"));
+    }
 
     @AfterMethod
     public void teardown(){
