@@ -3,6 +3,7 @@ package Tests;
 import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -45,8 +46,10 @@ public class LoginTest extends BaseTest {
         loginPage.inputLoginEmail("nata");
         loginPage.inputPassword("Qwerty1!");
         loginPage.clickOnLoginButton();
-        System.out.println(loginPage.emailErrorMessage.getText());
-        Assert.assertTrue(loginPage.emailErrorMessage.getText().contains("Login to your account"));
+        String errorMessage = driver.findElement(By.cssSelector("input[data-qa='login-email']"))
+                .getAttribute("validationMessage");
+        System.out.println(errorMessage);
+        Assert.assertTrue(errorMessage.contains("Please include an '@' in the email address."));
     }
 
     @Test(priority = 3)

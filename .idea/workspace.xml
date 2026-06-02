@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SignupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SignupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3EPEbZ3wQu1Z85HMMctrhlins00" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,6 +43,7 @@
     "TestNG.LoginTest.UserCanLoginValidCredentials.executor": "Run",
     "TestNG.LoginTest.UserCannotLoginWithInvalidEmail.executor": "Run",
     "TestNG.LoginTest.UserCannotLoginWithInvalidPassword.executor": "Run",
+    "TestNG.LoginTest.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignupTest.UserCanSignupSuccessfully.executor": "Run",
@@ -53,7 +51,7 @@
     "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
     "TestNG.UserCanSignInSuccessfully.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "login-tests",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "vcs.Git"
   }
@@ -151,8 +149,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidPassword" />
         <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidEmail" />
+        <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidPassword" />
         <item itemvalue="TestNG.LoginTest.UserCanLoginWithValidCredentials" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
       </list>
