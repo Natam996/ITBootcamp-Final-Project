@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/PaymentDonePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/PaymentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Base/ExcelReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/OrderProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/OrderProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login-tests" />
+        <entry key="$PROJECT_DIR$" value="search-products-tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
     "TestNG.AddToCartTest.UserCanChangeQuantityOfProduct.executor": "Run",
+    "TestNG.OrderProductTest.UserCanOrderProductWithValidCardInformation.executor": "Run",
     "TestNG.OrderProductTest.UserCanOrderProducts.executor": "Run",
     "TestNG.OrderProductTest.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
@@ -66,24 +64,6 @@
   }
 }]]></component>
   <component name="RunManager" selected="TestNG.OrderProductTest.UserCanOrderProducts">
-    <configuration name="AddToCartTest.UserCanAddToCartOneProduct" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ZavrsniProjekat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="METHOD_NAME" value="UserCanAddToCartOneProduct" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AddToCartTest.UserCanChangeQuantityOfProduct" type="TestNG" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -113,6 +93,24 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.OrderProductTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProductTest.UserCanOrderProductWithValidCardInformation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.OrderProductTest" />
+      <option name="METHOD_NAME" value="UserCanOrderProductWithValidCardInformation" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -175,10 +173,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.OrderProductTest.UserCanOrderProducts" />
-        <item itemvalue="TestNG.OrderProductTest" />
-        <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
+        <item itemvalue="TestNG.OrderProductTest.UserCanOrderProductWithValidCardInformation" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
         <item itemvalue="TestNG.SignupTest" />
+        <item itemvalue="TestNG.OrderProductTest" />
       </list>
     </recent_temporary>
   </component>
