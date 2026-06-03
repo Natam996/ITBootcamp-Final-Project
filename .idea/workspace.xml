@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Base/ExcelReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
     </list>
@@ -41,6 +42,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.LoginTest.UserCanLoginValidCredentials.executor": "Run",
+    "TestNG.LoginTest.UserCanLoginWithValidCredentials.executor": "Run",
     "TestNG.LoginTest.UserCannotLoginWithInvalidEmail.executor": "Run",
     "TestNG.LoginTest.UserCannotLoginWithInvalidPassword.executor": "Run",
     "TestNG.LoginTest.executor": "Run",
@@ -56,7 +58,7 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTest">
+  <component name="RunManager" selected="TestNG.LoginTest.UserCanLoginWithValidCredentials">
     <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -148,10 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.UserCanLoginWithValidCredentials" />
+        <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidPassword" />
         <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidEmail" />
-        <item itemvalue="TestNG.LoginTest.UserCannotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.LoginTest.UserCanLoginWithValidCredentials" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
       </list>
     </recent_temporary>

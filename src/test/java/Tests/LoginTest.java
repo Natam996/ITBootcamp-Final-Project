@@ -1,6 +1,7 @@
 package Tests;
 
 import Base.BaseTest;
+import Base.ExcelReader;
 import Pages.HomePage;
 import Pages.LoginPage;
 import org.openqa.selenium.By;
@@ -27,11 +28,12 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 1)
-    public void UserCanLoginWithValidCredentials(){
+    public void UserCanLoginWithValidCredentials() throws Exception {
+        String path = "C:\\Users\\Natalija Mitic\\Desktop\\1\\testData.xlsx";
         driver.navigate().to("https://automationexercise.com/login");
         Assert.assertTrue(loginPage.loginForm.isDisplayed());
-        loginPage.inputLoginEmail("natalija.8@gmail.com");
-        loginPage.inputPassword("Qwerty1!");
+        loginPage.inputLoginEmail(ExcelReader.getCellValue(path, 6,1));
+        loginPage.inputPassword(ExcelReader.getCellValue(path,1,2));
         loginPage.clickOnLoginButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/");
         Assert.assertTrue(homePage.loggedInName.isDisplayed());
@@ -40,11 +42,12 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void UserCannotLoginWithInvalidEmail() {
+    public void UserCannotLoginWithInvalidEmail() throws Exception {
+        String path = "C:\\Users\\Natalija Mitic\\Desktop\\1\\testData.xlsx";
         driver.navigate().to("https://automationexercise.com/login");
         Assert.assertTrue(loginPage.loginForm.isDisplayed());
-        loginPage.inputLoginEmail("nata");
-        loginPage.inputPassword("Qwerty1!");
+        loginPage.inputLoginEmail(ExcelReader.getCellValue(path, 4,1));
+        loginPage.inputPassword(ExcelReader.getCellValue(path, 1,2));
         loginPage.clickOnLoginButton();
         String errorMessage = driver.findElement(By.cssSelector("input[data-qa='login-email']"))
                 .getAttribute("validationMessage");
@@ -53,11 +56,12 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 3)
-    public void UserCannotLoginWithInvalidPassword() {
+    public void UserCannotLoginWithInvalidPassword() throws Exception {
+        String path = "C:\\Users\\Natalija Mitic\\Desktop\\1\\testData.xlsx";
         driver.navigate().to("https://automationexercise.com/login");
         Assert.assertTrue(loginPage.loginForm.isDisplayed());
-        loginPage.inputLoginEmail("natalija.8@gmail.com");
-        loginPage.inputPassword("QWA");
+        loginPage.inputLoginEmail(ExcelReader.getCellValue(path, 1,1));
+        loginPage.inputPassword(ExcelReader.getCellValue(path,3,2));
         loginPage.clickOnLoginButton();
         Assert.assertTrue(loginPage.passwordErrorMessage.getText().contains("Your email or password is incorrect!"));
     }
