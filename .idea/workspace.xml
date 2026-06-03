@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ShoppingCartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +50,7 @@
     "TestNG.AddToCartTest.UserCanDecreaseQuantityOfProduct.executor": "Run",
     "TestNG.AddToCartTest.UserCanDecreaseQuantityOfProductInShoppingCartPage.executor": "Run",
     "TestNG.AddToCartTest.UserCanHaveInCartOnlyPositiveNumberOfProducts.executor": "Run",
+    "TestNG.AddToCartTest.UserCanIncreaseQuantityOfProductInProductDetailsPage.executor": "Run",
     "TestNG.AddToCartTest.executor": "Run",
     "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
     "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
@@ -63,24 +63,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.UserCanChangeQuantityOfProductInShoppingCartPage">
-    <configuration name="AddToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ZavrsniProjekat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.AddToCartTest.UserCannotHaveNegativeNumberOfProductsInCart">
     <configuration name="AddToCartTest.UserCanAddToCartOneProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
@@ -117,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddToCartTest.UserCanHaveInCartOnlyPositiveNumberOfProducts" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToCartTest.UserCanDecreaseQuantityOfProductInProductDetailsPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +110,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="METHOD_NAME" value="UserCanHaveInCartOnlyPositiveNumberOfProducts" />
+      <option name="METHOD_NAME" value="UserCanDecreaseQuantityOfProductInProductDetailsPage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -135,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignupTest.UserCanSignupSuccessfully" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToCartTest.UserCanIncreaseQuantityOfProductInProductDetailsPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
       <extension name="coverage">
         <pattern>
@@ -144,8 +127,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SignupTest" />
-      <option name="METHOD_NAME" value="UserCanSignupSuccessfully" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="UserCanIncreaseQuantityOfProductInProductDetailsPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddToCartTest.UserCannotHaveNegativeNumberOfProductsInCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ZavrsniProjekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="UserCannotHaveNegativeNumberOfProductsInCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -155,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddToCartTest.UserCannotHaveNegativeNumberOfProductsInCart" />
         <item itemvalue="TestNG.AddToCartTest.UserCanChangeQuantityOfProductInShoppingCartPage" />
-        <item itemvalue="TestNG.AddToCartTest.UserCanHaveInCartOnlyPositiveNumberOfProducts" />
+        <item itemvalue="TestNG.AddToCartTest.UserCanDecreaseQuantityOfProductInProductDetailsPage" />
+        <item itemvalue="TestNG.AddToCartTest.UserCanIncreaseQuantityOfProductInProductDetailsPage" />
         <item itemvalue="TestNG.AddToCartTest.UserCanAddToCartOneProduct" />
-        <item itemvalue="TestNG.AddToCartTest" />
-        <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
       </list>
     </recent_temporary>
   </component>

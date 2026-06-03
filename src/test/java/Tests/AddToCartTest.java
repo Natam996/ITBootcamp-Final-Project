@@ -32,6 +32,7 @@ public class AddToCartTest extends BaseTest {
 
     }
 
+    //Test metoda koja implementira test case "Korisnik može uspešno da doda 1 komad u korpu"
     @Test(priority = 1)
     public void UserCanAddToCartOneProduct() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
@@ -40,16 +41,16 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Shopping Cart")); //provera da smo na pravom sajtu
         Assert.assertTrue(shoppingCartPage.shoppingCartMessage.getText().contains("Cart is empty! Click here to buy products")); //provera da je korpa prazna
         shoppingCartPage.clickOnTextHere();
-        //Thread.sleep(5000);
         closeAdPopupIfPresent();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
         Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
         scrollToElement(productsPage.products.get(4));
-        //If you need to hover and then click something that appears after hover:
+
+        //Ako je potrebno da zadržite kursor, a zatim kliknete na nešto što se pojavljuje nakon što zadržite kursor:
         Actions actions = new Actions(driver);
         actions.moveToElement(productsPage.products.get(4)).perform();
 
-        // Now click the button that appeared after hover
+        //Sada kliknite na dugme koje se pojavilo nakon prelaska mišem preko
         wait.until(ExpectedConditions.visibilityOf(productsPage.addToCartButton));
         productsPage.addToCartButton.click();
         Thread.sleep(3000);
@@ -60,6 +61,10 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
     }
 
+
+    //Test metoda koja implementira test case "Korisnik može da poveca broj komada na strani Product Details".
+    // Nakon dodavanja 1 komada u korpu, ode se na stranu Product Details i rucno doda 3 komada.
+    // Nakon toga se korisnik usmerava na Shopping Cart page i uverava se da ukupno ima 4 komada u korpi.
     @Test(priority = 2)
     public void UserCanIncreaseQuantityOfProductInProductDetailsPage() throws InterruptedException {
         UserCanAddToCartOneProduct();
@@ -78,6 +83,11 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(shoppingCartPage.cartDesription.getText().contains("Winter Top"));
     }
 
+
+    //Test metoda koja implementira test case "Korisnik može da smanji broj komada na strani Product Details".
+    //Nakon implementiranja test case "Korisnik može da poveca broj komada na strani Product Details" u korpi trenutno ima 4 komada.
+    //Korisnik moze da ode na Product Details page i rucno da upise broj "-3".
+    //Nakon toga se korisnik usmerava na Shopping Cart page i uverava se da ukupno ima 1 komad u korpi.
     @Test(priority = 3)
     public void UserCanDecreaseQuantityOfProductInProductDetailsPage() throws InterruptedException {
         UserCanIncreaseQuantityOfProductInProductDetailsPage(); //ovde sada ima 4 komada u korpi
@@ -87,8 +97,10 @@ public class AddToCartTest extends BaseTest {
         productsPage.clickOnViewCart();
         Assert.assertTrue(shoppingCartPage.cartQuantity.getText().contains("1"));
     }
-    //Verifikacija da kada smo na strani Shopping Cart mozemo da menjamo broj komada u korpi.
-    //Test Pada jer je polje za Quantity onemoguceno za unos/manipulaciju.
+
+    //Test metoda koja implementira test case "Korisnik može da promeni broj komada na Shopping Cart page".
+    //Asertacija da kada smo na strani Shopping Cart mozemo da menjamo broj komada u korpi.
+    //Test pada jer je polje za Quantity onemoguceno za unos/manipulaciju.
     @Test(priority = 4)
     public void UserCanChangeQuantityOfProductInShoppingCartPage() throws InterruptedException {
         UserCanIncreaseQuantityOfProductInProductDetailsPage(); //ovde sada ima 4 komada u korpi
@@ -96,7 +108,9 @@ public class AddToCartTest extends BaseTest {
         Assert.assertEquals(shoppingCartPage.quantityBox.getText(), "10");
     }
 
-    //Verifikacija da u korpi mora da postoji broj veci od nule. Test pada jer Quantity box dozvoljava negativne brojeve.
+
+    //Test metoda koja implementira test case "Korisnik ne moze da ima negativan broj komada u korpi".
+    //Asertacija da u korpi mora da postoji broj veci od nule. Test pada jer Quantity box dozvoljava negativne brojeve.
     //parseInt konvertuje tekst u broj, pa proverava da li je veći od 0.
     @Test(priority = 5)
     public void UserCannotHaveNegativeNumberOfProductsInCart() throws InterruptedException {
