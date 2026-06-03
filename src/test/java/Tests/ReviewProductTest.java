@@ -4,6 +4,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.ProductDetailsPage;
 import Pages.ProductsPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -27,7 +28,8 @@ public class ReviewProductTest extends BaseTest {
         productDetailsPage = new ProductDetailsPage();
     }
 
-    @Test
+    //Test metoda koja implementira test case "Korisnik može uspešno da ostavi recenziju za odredjeni komad".
+    @Test(priority = 1)
     public void UserCanReviewProduct() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         homePage.clickOnProducts();
@@ -42,6 +44,25 @@ public class ReviewProductTest extends BaseTest {
         Assert.assertTrue(productDetailsPage.successAlert.getText().contains("Thank you for your review"));
     }
 
+    //Test metoda koja implementira test case "Korisnik ne može da ostavi recenziju ako je email polje prazno".
+    @Test(priority = 2)
+    public void UserHasToFillInEmailFieldToSendReview(){
+        driver.navigate().to("https://automationexercise.com/");
+        homePage.clickOnProducts();
+        closeAdPopupIfPresent1();
+        closeAdPopupIfPresent2();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/products"); //asertacija da smo na Products page
+        Assert.assertEquals(productsPage.allProducts.getText(), "ALL PRODUCTS");
+        scrollToElement(productsPage.products.get(4));
+        productsPage.clickOnViewProduct();
+        productDetailsPage.inputNameAndEmail("Natalija", "");
+        productDetailsPage.sendReview("Top is not the right size!");
+        String errorMessage = driver.findElement(By.id("email"))
+                .getAttribute("validationMessage");
+        Assert.assertTrue(errorMessage.contains("Please fill out this field"));
+
+
+    }
     @AfterMethod
     public void teardown() {
         driver.quit();
