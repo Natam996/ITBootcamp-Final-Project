@@ -1,10 +1,8 @@
 package Base;
 
-import Pages.AccountCreatedPage;
-import Pages.HomePage;
-import Pages.LoginPage;
-import Pages.SignupPage;
+import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +17,7 @@ public class BaseTest {
     public LoginPage loginPage;
     public SignupPage signupPage;
     public AccountCreatedPage accountCreatedPage;
+    public AccountDeletedPage accountDeletedPage;
 
 
 
@@ -31,5 +30,17 @@ public class BaseTest {
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void closeAdPopupIfPresent3() {
+        try {
+            driver.switchTo().frame("aswift_2");
+            WebElement closeButton = driver.findElement(By.id("dismiss-button-element"));
+            closeButton.click();
+            driver.switchTo().defaultContent();
+        } catch (Exception e) {
+            driver.switchTo().defaultContent();
+            System.out.println("No ad popup found");
+        }
     }
 }

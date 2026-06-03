@@ -21,6 +21,9 @@ public class HomePage extends BaseTest {
     @FindBy(linkText = "Logout")
     public WebElement logoutButton;
 
+    @FindBy(linkText = "Delete Account")
+    public WebElement deleteAccountButton;
+
 
 
     //-------------------------------------
@@ -32,6 +35,10 @@ public class HomePage extends BaseTest {
 
     public void clickOnLogoutButton(){
         logoutButton.click();
+    }
+
+    public void clickOnDeleteAccount(){
+        deleteAccountButton.click();
     }
 
 }
