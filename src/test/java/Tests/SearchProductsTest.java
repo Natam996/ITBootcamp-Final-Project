@@ -28,6 +28,7 @@ public class SearchProductsTest extends BaseTest {
         brandProducts = new BrandProducts();
     }
 
+    //Test metoda koja implementira test case "Korisnik može da pretrazuje komad preko stranice All Products"
     @Test(priority = 1)
     public void UserCanSearchProductFromAllProducts() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
@@ -39,6 +40,7 @@ public class SearchProductsTest extends BaseTest {
         Assert.assertTrue(productsPage.products.get(4).getText().contains("Winter Top"));
     }
 
+    //Test metoda koja implementira test case "Korisnik može da pretrazuje komad preko sidebar Category", i to klikom na kategoriju a zatim na sab-kategoriju.
     @Test(priority = 2)
     public void UserCanSearchProductFromCategorySidebar() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
@@ -53,18 +55,20 @@ public class SearchProductsTest extends BaseTest {
         Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
     }
 
+    //Test metoda koja implementira test case "Korisnik može da pretrazuje komad preko Brands opcije"
     @Test(priority = 3)
     public void UserCanSearchProductFromBrands() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         scrollToElement(brands.brandsNames.get(0));
         brands.clickOnBrandsName("MAST & HARBOUR");
-        closeAdPopupIfPresent1();
-        closeAdPopupIfPresent2();
-        Thread.sleep(3000);
+        driver.navigate().refresh();
+        //closeAdPopupIfPresent1();
+        //closeAdPopupIfPresent2();
         Assert.assertTrue(brandProducts.brandProductTitle.getText().contains("BRAND - MAST & HARBOUR PRODUCTS"));
         Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
     }
 
+    //Test metoda koja implementira test case "Korisnik može da pretrazuje komad preko searchbar-a", gde se rucno unosi naziv zeljenog komada.
     @Test(priority = 4)
     public void UserCanSearchProductFromSearchBar() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
@@ -76,10 +80,12 @@ public class SearchProductsTest extends BaseTest {
         productsPage.clickOnSearch();
         Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
     }
-     //Verifikacija da se nadje proizvod kada se ukuca u searchbar, bez razmaka i sam malim slovima.
+
+    //Test metoda koja implementira test case "Korisnik može da pretrazuje komad preko searchbar-a i to bez razmaka", gde se rucno unosi naziv zeljenog komada i to bez razmaka.
+    //Asertacija da se nadje proizvod kada se ukuca u searchbar, bez razmaka i sam malim slovima.
     // Test pada, ne pronalazi trazeni komad.
     @Test(priority = 5)
-    public void SearchProductFromSearchBarNoSpaces() throws InterruptedException {
+    public void UserCanSearchProductFromSearchBarNoSpaces() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         homePage.clickOnProducts();
         Thread.sleep(3000);
