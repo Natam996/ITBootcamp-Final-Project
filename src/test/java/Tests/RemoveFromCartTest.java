@@ -29,6 +29,7 @@ public class RemoveFromCartTest extends BaseTest {
         productsPage = new ProductsPage();
     }
 
+    //Test metoda koja implementira test case "Korisnik može uspešno da izbrise komad iz korpe".
     @Test
     public void UserCanRemoveProductFromCart() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
