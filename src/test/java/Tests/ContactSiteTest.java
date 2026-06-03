@@ -28,6 +28,7 @@ public class ContactSiteTest extends BaseTest {
         reviewAddedPage = new ReviewAddedPage();
     }
 
+    //Test metoda koja implementira test case "Korisnik može uspešno da kontaktira sajt bez dodavanja fajla".
     @Test(priority = 1)
     public void UserCanContactSiteWithoutUploadingFile() {
         driver.navigate().to("https://automationexercise.com/");
@@ -40,6 +41,7 @@ public class ContactSiteTest extends BaseTest {
         Assert.assertTrue(reviewAddedPage.reviewAddedMessage.getText().contains("Success! Your details have been submitted successfully."));
     }
 
+    //Test metoda koja implementira test case "Korisnik može uspešno da kontaktira sajt sa dodavanjem fajla".
     @Test(priority = 2)
     public void UserCanContactSiteAndUploadFile() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");

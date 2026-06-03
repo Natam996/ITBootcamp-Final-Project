@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af915350-b1fd-4567-85bb-0304c933e805" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ContactSiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ContactSiteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,33 +37,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor": "Run",
-    "TestNG.AddToCartTest.UserCanChangeQuantityOfProduct.executor": "Run",
-    "TestNG.ContactSiteTest.UserCanContactSiteAndUploadFile.executor": "Run",
-    "TestNG.ContactSiteTest.UserCanContactSiteWithoutUploadingFile.executor": "Run",
-    "TestNG.OrderProductTest.UserCanOrderProducts.executor": "Run",
-    "TestNG.OrderProductTest.executor": "Run",
-    "TestNG.ReviewProductTest.UserCanReviewProduct.executor": "Run",
-    "TestNG.SignUp.UserCanSignUpSuccessfully.executor": "Run",
-    "TestNG.SignUpTest.UserCanSignUpSuccessfully.executor": "Run",
-    "TestNG.SignupTest.UserCanSignupSuccessfully.executor": "Run",
-    "TestNG.SignupTest.executor": "Run",
-    "TestNG.UserCanSignInSuccessfully.SignIn.executor": "Run",
-    "TestNG.UserCanSignInSuccessfully.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "contact-site-tests",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.AddToCartTest.UserCanAddToCartOneProduct.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AddToCartTest.UserCanChangeQuantityOfProduct.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ContactSiteTest.UserCanContactSiteAndUploadFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ContactSiteTest.UserCanContactSiteWithoutUploadingFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.OrderProductTest.UserCanOrderProducts.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.OrderProductTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ReviewProductTest.UserCanReviewProduct.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignUp.UserCanSignUpSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignUpTest.UserCanSignUpSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignupTest.UserCanSignupSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignupTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserCanSignInSuccessfully.SignIn.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserCanSignInSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;contact-site-tests&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.ContactSiteTest.UserCanContactSiteAndUploadFile">
     <configuration name="AddToCartTest.UserCanChangeQuantityOfProduct" type="TestNG" nameIsGenerated="true">
       <module name="ZavrsniProjekat" />
@@ -176,9 +176,9 @@
       <list>
         <item itemvalue="TestNG.ContactSiteTest.UserCanContactSiteAndUploadFile" />
         <item itemvalue="TestNG.ContactSiteTest.UserCanContactSiteWithoutUploadingFile" />
-        <item itemvalue="TestNG.ReviewProductTest.UserCanReviewProduct" />
         <item itemvalue="TestNG.SignupTest.UserCanSignupSuccessfully" />
         <item itemvalue="TestNG.SignupTest" />
+        <item itemvalue="TestNG.ReviewProductTest.UserCanReviewProduct" />
       </list>
     </recent_temporary>
   </component>
