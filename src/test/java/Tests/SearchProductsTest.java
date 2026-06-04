@@ -45,12 +45,10 @@ public class SearchProductsTest extends BaseTest {
     public void UserCanSearchProductFromCategorySidebar() throws InterruptedException {
         driver.navigate().to("https://automationexercise.com/");
         scrollToElement(sidebarCategory.categoryPeople.get(0));
-        closeAdPopupIfPresent2();
         sidebarCategory.clickOnCategory("WOMEN");
         closeAdPopupIfPresent1();
         closeAdPopupIfPresent2();
-        Thread.sleep(3000);
-        wait.until(ExpectedConditions.elementToBeClickable(sidebarCategory.womenSubCategories.get(0)));
+        wait.until(ExpectedConditions.elementToBeClickable(sidebarCategory.womenSubCategories.get(1)));
         sidebarCategory.womenSubCategories.get(1).click();
         Assert.assertTrue(productsPage.products.stream().anyMatch(p -> p.getText().contains("Winter Top")));
     }
